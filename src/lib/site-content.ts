@@ -19,6 +19,20 @@ export const siteContent: Record<
       button: string;
       items: { title: string; image: string }[];
     };
+    heroSecondary: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      cta: string;
+      image: string;
+    };
+    heroTertiary: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      cta: string;
+      image: string;
+    };
     about: { title: string; lead: string; body: string; highlightsTitle: string };
     highlights: { title: string; text: string }[];
     services: {
@@ -27,6 +41,7 @@ export const siteContent: Record<
       revealHover: string;
       items: { eyebrow: string; title: string; text: string; image: string }[];
     };
+    productGroups: { title: string; items: string[] }[];
     gallery: { title: string; items: { src: string; alt: string }[] };
     cta: { title: string; text: string; button: string; image: string };
     contact: {
@@ -55,83 +70,123 @@ export const siteContent: Record<
     meta: {
       title: "MM Persienner Stockholm",
       description:
-        "Sol- och insynsskydd i Storstockholm. Persienner, markiser och balkongskydd med snabb leverans och professionell montering.",
+        "M.M Persienner Stockholm \u00e4r ett dynamiskt, professionellt f\u00f6retag som \u00e4r specialiserat p\u00e5 sol- och insynsskydd som persienner, markiser och balkongskydd. Hj\u00e4rtligt v\u00e4lkommen som kund.",
     },
     nav: {
       about: "Om oss",
-      services: "Tjänster",
+      services: "Tj\u00e4nster",
       gallery: "Projekt",
       contact: "Kontakt",
     },
     hero: {
       eyebrow: "Sol- och insynsskydd i Storstockholm",
-      title: "MM Persienner Stockholm står för stil inne och ute",
+      title: "M.M PERSIENNER STOCKHOLM ST\u00c5R F\u00d6R SMAK OCH STIL INNE OCH I UTERUMMET",
       subtitle:
-        "Vi är ett dynamiskt, professionellt företag specialiserat på persienner, markiser och balkongskydd.",
-      cta: "Boka kostnadsfritt hembesök",
-      image: "/legacy/site/mmpersienner-2.jpg",
+        "M.M Persienner Stockholm \u00e4r ett dynamiskt, professionellt f\u00f6retag som \u00e4r specialiserat p\u00e5 sol- och insynsskydd som persienner, markiser och balkongskydd.",
+      cta: "Boka kostnadsfritt hembes\u00f6k",
+      image: "/legacy/site/Persienner-Stockholm-8.jpg",
     },
     heroSlider: {
       button: "Kontakta oss",
       items: [
         {
-          title: "MM Persienner Stockholm",
-          image: "/legacy/site/MM-Persienner-Stockholm.jpg",
-        },
-        {
-          title: "Markiser och Solskydd",
-          image: "/legacy/site/Markiser-Stockholm-1.jpg",
-        },
-        {
-          title: "Persienner for Uterum",
+          title: "Persienner Stockholm",
           image: "/legacy/site/Persienner-Stockholm-8.jpg",
         },
         {
-          title: "Balkongskydd och Inne",
-          image: "/legacy/site/mmpersienner-2.jpg",
+          title: "Markiser Stockholm",
+          image: "/legacy/site/Markiser-Stockholm-1.jpg",
         },
-      ],
-    },
-    about: {
-      title: "Specialister på persienner och markiser",
-      lead:
-        "Vi hjälper privatpersoner och företag med måttbeställda solskydd, snabb leverans och professionell montering.",
-      body:
-        "MM Persienner Stockholm har sin bas i Älvsjö men servar kunder i hela Storstockholm. Med lång erfarenhet, god kommunikation och välutbildade montörer levererar vi hållbara lösningar till rätt pris.",
-      highlightsTitle: "Varför välja oss",
-    },
-    highlights: [
-      {
-        title: "5 års garanti",
-        text: "Skriftlig garanti på både material och arbete.",
-      },
-      {
-        title: "Svenska kvalitetsprodukter",
-        text: "Hållbara produkter som klarar nordiskt klimat.",
-      },
-      {
-        title: "Snabb leverans och montering",
-        text: "Punktlig leverans och professionell installation.",
-      },
-    ],
-    services: {
-      title: "Tjänster",
-      revealTitle: "Utvalda lösningar",
-      revealHover: "Se detaljer",
-      items: [
         {
-          eyebrow: "Solskydd",
-          title: "Persienner",
-          text:
-            "Måttbeställda persienner i aluminium och trä för hem och kontor.",
+          title: "Balkongskydd",
+          image: "/legacy/site/MM-Persienner-Stockholm.jpg",
+        },
+        {
+          title: "Persienner i Stockholm",
+          image: "/legacy/site/Persienner-Stockholm.jpg",
+        },
+        {
+          title: "Persienner detalj",
+          image: "/legacy/site/Persienner-Stockholm-1.jpg",
+        },
+        {
+          title: "Persienner hemma",
           image: "/legacy/site/Persienner-Stockholm-2.jpg",
         },
         {
-          eyebrow: "Utemiljö",
+          title: "Tr\u00e4persienner",
+          image: "/legacy/site/Persienner-Stockholm-4.jpg",
+        },
+        {
+          title: "Aluminiumpersienner",
+          image: "/legacy/site/Persienner-Stockholm-5.jpg",
+        },
+        {
+          title: "Specialm\u00e5tt",
+          image: "/legacy/site/Persienner-stockholm-019.jpg",
+        },
+        {
+          title: "H\u00e5llbara svenska produkter",
+          image: "/legacy/site/renew.jpg",
+        },
+      ],
+    },
+    heroSecondary: {
+      eyebrow: "MM Persienner Stockholm",
+      title: "Dynamiskt, professionellt och n\u00e4ra kunden",
+      text:
+        "Vi \u00e4r specialister p\u00e5 solskydd som persienner och markiser i en m\u00e4ngd utf\u00f6randen. Vi har v\u00e5r bas i \u00c4lvsj\u00f6 men servar kunder i hela Storstockholmsomr\u00e5det.",
+      cta: "Kontakta oss",
+      image: "/legacy/site/MM-Persienner-Stockholm.jpg",
+    },
+    heroTertiary: {
+      eyebrow: "5 \u00e5rs garanti",
+      title: "Skriftlig garanti p\u00e5 b\u00e5de material och arbete",
+      text:
+        "Vi f\u00f6r endast h\u00f6gkvalitativa svenska produkter som \u00e4r h\u00e5llbara. Vi \u00e4r k\u00e4nda f\u00f6r gedigen kvalitet, kort leveranstid och montering till bra priser.",
+      cta: "Boka hembes\u00f6k",
+      image: "/legacy/site/Persienner-Stockholm-4.jpg",
+    },
+    about: {
+      title: "Specialister p\u00e5 sol- och insynsskydd",
+      lead:
+        "Vi \u00e4r specialister p\u00e5 solskydd som bland annat persienner och markiser i en m\u00e4ngd utf\u00f6randen.",
+      body:
+        "M.M Persienner Stockholm har sin bas i \u00c4lvsj\u00f6 men servar kunder i hela Storstockholmsomr\u00e5det. Vi erbjuder gedigen kvalitet, kort leveranstid och montering till bra priser.",
+      highlightsTitle: "Varf\u00f6r v\u00e4lja oss",
+    },
+    highlights: [
+      {
+        title: "5 \u00e5rs garanti",
+        text: "Skriftlig garanti p\u00e5 b\u00e5de material och arbete.",
+      },
+      {
+        title: "Svenska kvalitetsprodukter",
+        text: "H\u00e5llbara produkter som klarar nordiskt klimat.",
+      },
+      {
+        title: "Kort leveranstid",
+        text: "Snabb leverans och professionell montering.",
+      },
+    ],
+    services: {
+      title: "Tj\u00e4nster",
+      revealTitle: "Utvalda l\u00f6sningar",
+      revealHover: "Se detaljer",
+      items: [
+        {
+          eyebrow: "Utemilj\u00f6",
           title: "Markiser",
           text:
-            "Fönster-, balkong- och terrassmarkiser med manuell styrning eller motor.",
-          image: "/legacy/site/markiser-stockholm-5.jpg",
+            "Balkong-, f\u00f6nster- och terrassmarkiser i flera utf\u00f6randen.",
+          image: "/legacy/site/Markiser-Stockholm-1.jpg",
+        },
+        {
+          eyebrow: "Inomhus",
+          title: "Persienner",
+          text:
+            "Aluminium-, tr\u00e4- och fasadpersienner med m\u00e5ttbest\u00e4llning.",
+          image: "/legacy/site/Persienner-Stockholm-8.jpg",
         },
         {
           eyebrow: "Insynsskydd",
@@ -141,100 +196,122 @@ export const siteContent: Record<
           image: "/legacy/site/MM-Persienner-Stockholm.jpg",
         },
         {
-          eyebrow: "Inredning",
-          title: "Plissegardiner",
+          eyebrow: "Textil",
+          title: "Gardiner",
           text:
-            "Elegant och flexibel ljusreglering som passar alla fönsterformer.",
-          image: "/legacy/site/Persienner-Stockholm-3.jpg",
+            "Pliss\u00e9gardiner, rullgardiner, lamell- och hissgardiner.",
+          image: "/legacy/site/Persienner-Stockholm-1.jpg",
+        },
+        {
+          eyebrow: "Service",
+          title: "Reparation",
+          text:
+            "Reparation och uppgradering av befintliga solskydd.",
+          image: "/legacy/site/Persienner-Stockholm-4.jpg",
+        },
+        {
+          eyebrow: "Helhetsl\u00f6sning",
+          title: "M\u00e4tning & montering",
+          text:
+            "Vi m\u00e4ter p\u00e5 plats, ger kostnadsf\u00f6rslag och monterar.",
+          image: "/legacy/site/Persienner-Stockholm-5.jpg",
         },
       ],
     },
+    productGroups: [
+      {
+        title: "Markiser",
+        items: [
+          "Balkongskydd",
+          "Vertikalmarkis",
+          "Korgmarkis",
+          "Markisolette",
+          "Balkongmarkis",
+          "Sidomarkis",
+          "F\u00f6nstermarkis",
+          "Terrassmarkis",
+        ],
+      },
+      {
+        title: "Gardiner",
+        items: [
+          "Pliss\u00e9gardiner",
+          "Rullgardiner",
+          "Lamellgardiner",
+          "M\u00f6rkl\u00e4ggande gardiner",
+          "Hissgardiner",
+        ],
+      },
+      {
+        title: "Persienner",
+        items: [
+          "Aluminiumpersienner",
+          "Tr\u00e4persienner",
+          "Fasadpersienner",
+        ],
+      },
+    ],
     gallery: {
       title: "Utvalda projekt",
       items: [
         {
-          src: "/legacy/site/MM-Persienner-Stockholm.jpg",
-          alt: "MM Persienner Stockholm",
+          src: "/legacy/site/Persienner-Stockholm-8.jpg",
+          alt: "Persienner Stockholm",
         },
         {
           src: "/legacy/site/Markiser-Stockholm-1.jpg",
           alt: "Markiser Stockholm",
         },
         {
-          src: "/legacy/site/Persienner-Stockholm-8.jpg",
-          alt: "Persienner uterum",
+          src: "/legacy/site/MM-Persienner-Stockholm.jpg",
+          alt: "MM Persienner Stockholm",
         },
         {
-          src: "/legacy/site/mmpersienner-2.jpg",
-          alt: "Balkongskydd och inne",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-1.jpg",
+          src: "/legacy/site/Persienner-Stockholm.jpg",
           alt: "Persienner i Stockholm",
         },
         {
-          src: "/legacy/site/Persienner-Stockholm-2.jpg",
-          alt: "Måttbeställda persienner",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-3.jpg",
-          alt: "Persienner för hem",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-4.jpg",
-          alt: "Persienner i vardagsrum",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-5.jpg",
-          alt: "Solskydd i kök",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-6.jpg",
+          src: "/legacy/site/Persienner-Stockholm-1.jpg",
           alt: "Persienner detalj",
         },
         {
-          src: "/legacy/site/Markiser-Stockholm.jpg",
-          alt: "Markiser i Stockholm",
+          src: "/legacy/site/Persienner-Stockholm-2.jpg",
+          alt: "Persienner hemma",
         },
         {
-          src: "/legacy/site/Markiser-Stockholm-1.jpg",
-          alt: "Terrassmarkiser",
+          src: "/legacy/site/Persienner-Stockholm-4.jpg",
+          alt: "Persienner vardagsrum",
         },
         {
-          src: "/legacy/site/markiser-stockholm-4.jpg",
-          alt: "Balkongmarkiser",
+          src: "/legacy/site/Persienner-Stockholm-5.jpg",
+          alt: "Persienner k\u00f6k",
         },
         {
-          src: "/legacy/site/markiser-stockholm-7.jpg",
-          alt: "Solskydd för fasad",
+          src: "/legacy/site/Persienner-stockholm-019.jpg",
+          alt: "Specialm\u00e5tt persienner",
         },
         {
-          src: "/legacy/site/Persienner-stockholm-021.jpg",
-          alt: "Persienner i sovrum",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-023.jpg",
-          alt: "Specialmått persienner",
+          src: "/legacy/site/renew.jpg",
+          alt: "H\u00e5llbara svenska produkter",
         },
       ],
     },
     cta: {
-      title:
-        "Har du funderat på att installera markiser i Stockholm för uteplats eller fönster?",
+      title: "Markiser som f\u00f6rl\u00e4nger s\u00e4songen",
       text:
-        "Vi ger kostnadsförslag, gör mätningar på plats och erbjuder skräddarsydda lösningar.",
+        "En vacker markis berikar balkong, altan eller terrass och skyddar samtidigt m\u00f6bler och mattor fr\u00e5n solblekning. Vi g\u00f6r hembes\u00f6k, ger kostnadsf\u00f6rslag och tar n\u00f6dv\u00e4ndiga m\u00e5tt.",
       button: "Kontakta oss",
-      image: "/legacy/site/markiser-stockholm-10.jpg",
+      image: "/legacy/site/Markiser-Stockholm-1.jpg",
     },
     contact: {
       title: "Kontakta oss",
       lead:
-        "Vi tar oss an små som stora objekt. Ring oss så kommer vi och mäter och ger prisförslag.",
-      addressLabel: "Besöksadress",
+        "Vi tar oss an sm\u00e5 som stora objekt. Ring oss s\u00e5 kommer vi och m\u00e4ter och ger prisf\u00f6rslag.",
+      addressLabel: "Bes\u00f6ksadress",
       phoneLabel: "Telefon",
       emailLabel: "E-post",
       orgLabel: "Organisationsnummer",
-      address: "Färlandagränd 44, 125 72 Älvsjö",
+      address: "F\u00f6rlandagr\u00e4nd 44, 125 72 \u00c4lvsj\u00f6",
       phone: "076-415 04 46",
       email: "info@mmpersienner.se",
       orgNumber: "559161-8664",
@@ -247,12 +324,11 @@ export const siteContent: Record<
         submit: "Skicka",
       },
     },
-  },
-  en: {
+  },  en: {
     meta: {
       title: "MM Persienner Stockholm",
       description:
-        "Sun and privacy protection in Greater Stockholm. Blinds, awnings and balcony screens with fast delivery and professional installation.",
+        "MM Persienner Stockholm is a dynamic, professional company specializing in sun and privacy protection such as blinds, awnings and balcony screens. You are warmly welcome as a customer.",
     },
     nav: {
       about: "About",
@@ -262,53 +338,93 @@ export const siteContent: Record<
     },
     hero: {
       eyebrow: "Sun and privacy protection in Stockholm",
-      title: "MM Persienner Stockholm stands for style indoors and outdoors",
+      title: "MM PERSIENNER STOCKHOLM STANDS FOR TASTE AND STYLE INDOORS AND IN CONSERVATORIES",
       subtitle:
-        "We are a professional team specializing in blinds, awnings and balcony screens.",
+        "MM Persienner Stockholm is a dynamic, professional company specializing in sun and privacy protection such as blinds, awnings and balcony screens.",
       cta: "Book a free home visit",
-      image: "/legacy/site/mmpersienner-2.jpg",
+      image: "/legacy/site/Persienner-Stockholm-8.jpg",
     },
     heroSlider: {
       button: "Contact us",
       items: [
         {
-          title: "MM Persienner Stockholm",
-          image: "/legacy/site/MM-Persienner-Stockholm.jpg",
-        },
-        {
-          title: "Awnings and Sun Protection",
-          image: "/legacy/site/Markiser-Stockholm-1.jpg",
-        },
-        {
-          title: "Blinds for Conservatories",
+          title: "Stockholm blinds",
           image: "/legacy/site/Persienner-Stockholm-8.jpg",
         },
         {
-          title: "Balcony Screens Indoors",
-          image: "/legacy/site/mmpersienner-2.jpg",
+          title: "Stockholm awnings",
+          image: "/legacy/site/Markiser-Stockholm-1.jpg",
+        },
+        {
+          title: "Balcony screens",
+          image: "/legacy/site/MM-Persienner-Stockholm.jpg",
+        },
+        {
+          title: "Blinds in Stockholm",
+          image: "/legacy/site/Persienner-Stockholm.jpg",
+        },
+        {
+          title: "Blinds detail",
+          image: "/legacy/site/Persienner-Stockholm-1.jpg",
+        },
+        {
+          title: "Blinds for homes",
+          image: "/legacy/site/Persienner-Stockholm-2.jpg",
+        },
+        {
+          title: "Wooden blinds",
+          image: "/legacy/site/Persienner-Stockholm-4.jpg",
+        },
+        {
+          title: "Aluminum blinds",
+          image: "/legacy/site/Persienner-Stockholm-5.jpg",
+        },
+        {
+          title: "Custom sizes",
+          image: "/legacy/site/Persienner-stockholm-019.jpg",
+        },
+        {
+          title: "Durable Swedish products",
+          image: "/legacy/site/renew.jpg",
         },
       ],
     },
+    heroSecondary: {
+      eyebrow: "MM Persienner Stockholm",
+      title: "Dynamic, professional and close to the customer",
+      text:
+        "We are specialists in sun protection such as blinds and awnings in a wide range of designs. Based in \u00c4lvsj\u00f6, we serve customers across Greater Stockholm.",
+      cta: "Contact us",
+      image: "/legacy/site/MM-Persienner-Stockholm.jpg",
+    },
+    heroTertiary: {
+      eyebrow: "5-year warranty",
+      title: "Written warranty on both materials and labor",
+      text:
+        "We only supply high-quality Swedish products built to last. We are known for solid quality, short lead times and installation at great prices.",
+      cta: "Book a visit",
+      image: "/legacy/site/Persienner-Stockholm-4.jpg",
+    },
     about: {
-      title: "Specialists in blinds and awnings",
+      title: "Specialists in sun and privacy protection",
       lead:
-        "We help homeowners and businesses with custom sun protection, fast delivery and professional installation.",
+        "We are specialists in sun protection such as blinds and awnings in many different designs.",
       body:
-        "Based in Älvsjö, we serve customers across Greater Stockholm. With long experience, clear communication and skilled installers, we deliver durable solutions at the right price.",
+        "MM Persienner Stockholm is based in \u00c4lvsj\u00f6 and serves customers across Greater Stockholm. We deliver solid quality, short lead times and installation at great prices.",
       highlightsTitle: "Why choose us",
     },
     highlights: [
       {
         title: "5-year warranty",
-        text: "Written warranty for both materials and labor.",
+        text: "Written warranty on both materials and labor.",
       },
       {
         title: "Swedish quality products",
         text: "Durable products built for Nordic conditions.",
       },
       {
-        title: "Fast delivery and installation",
-        text: "On-time delivery and professional installation.",
+        title: "Short lead times",
+        text: "Fast delivery and professional installation.",
       },
     ],
     services: {
@@ -317,18 +433,18 @@ export const siteContent: Record<
       revealHover: "See details",
       items: [
         {
-          eyebrow: "Sun protection",
-          title: "Blinds",
-          text:
-            "Custom blinds in aluminum and wood for homes and offices.",
-          image: "/legacy/site/Persienner-Stockholm-2.jpg",
-        },
-        {
           eyebrow: "Outdoor",
           title: "Awnings",
           text:
-            "Window, balcony and terrace awnings with manual control or motor.",
-          image: "/legacy/site/markiser-stockholm-5.jpg",
+            "Balcony, window and terrace awnings in several designs.",
+          image: "/legacy/site/Markiser-Stockholm-1.jpg",
+        },
+        {
+          eyebrow: "Indoor",
+          title: "Blinds",
+          text:
+            "Aluminum, wooden and facade blinds with custom measurements.",
+          image: "/legacy/site/Persienner-Stockholm-8.jpg",
         },
         {
           eyebrow: "Privacy",
@@ -338,43 +454,86 @@ export const siteContent: Record<
           image: "/legacy/site/MM-Persienner-Stockholm.jpg",
         },
         {
-          eyebrow: "Interior",
-          title: "Pleated blinds",
+          eyebrow: "Textile",
+          title: "Curtains",
           text:
-            "Elegant and flexible light control that fits any window shape.",
-          image: "/legacy/site/Persienner-Stockholm-3.jpg",
+            "Pleated blinds, roller blinds, vertical blinds and roman blinds.",
+          image: "/legacy/site/Persienner-Stockholm-1.jpg",
+        },
+        {
+          eyebrow: "Service",
+          title: "Repairs",
+          text:
+            "Repairs and upgrades of existing sun protection.",
+          image: "/legacy/site/Persienner-Stockholm-4.jpg",
+        },
+        {
+          eyebrow: "Full service",
+          title: "Measurement & installation",
+          text:
+            "We measure on site, provide quotes and install.",
+          image: "/legacy/site/Persienner-Stockholm-5.jpg",
         },
       ],
     },
+    productGroups: [
+      {
+        title: "Awnings",
+        items: [
+          "Balcony screens",
+          "Vertical awnings",
+          "Basket awnings",
+          "Markisolette",
+          "Balcony awnings",
+          "Side awnings",
+          "Window awnings",
+          "Terrace awnings",
+        ],
+      },
+      {
+        title: "Curtains",
+        items: [
+          "Pleated blinds",
+          "Roller blinds",
+          "Vertical blinds",
+          "Blackout curtains",
+          "Roman blinds",
+        ],
+      },
+      {
+        title: "Blinds",
+        items: [
+          "Aluminum blinds",
+          "Wooden blinds",
+          "Facade blinds",
+        ],
+      },
+    ],
     gallery: {
       title: "Selected projects",
       items: [
+        {
+          src: "/legacy/site/Persienner-Stockholm-8.jpg",
+          alt: "Stockholm blinds",
+        },
+        {
+          src: "/legacy/site/Markiser-Stockholm-1.jpg",
+          alt: "Stockholm awnings",
+        },
         {
           src: "/legacy/site/MM-Persienner-Stockholm.jpg",
           alt: "MM Persienner Stockholm",
         },
         {
-          src: "/legacy/site/Markiser-Stockholm-1.jpg",
-          alt: "Awnings in Stockholm",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-8.jpg",
-          alt: "Blinds for conservatories",
-        },
-        {
-          src: "/legacy/site/mmpersienner-2.jpg",
-          alt: "Balcony screens",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-1.jpg",
+          src: "/legacy/site/Persienner-Stockholm.jpg",
           alt: "Blinds in Stockholm",
         },
         {
-          src: "/legacy/site/Persienner-Stockholm-2.jpg",
-          alt: "Custom blinds",
+          src: "/legacy/site/Persienner-Stockholm-1.jpg",
+          alt: "Blinds detail",
         },
         {
-          src: "/legacy/site/Persienner-Stockholm-3.jpg",
+          src: "/legacy/site/Persienner-Stockholm-2.jpg",
           alt: "Blinds for homes",
         },
         {
@@ -383,45 +542,24 @@ export const siteContent: Record<
         },
         {
           src: "/legacy/site/Persienner-Stockholm-5.jpg",
-          alt: "Kitchen sun protection",
+          alt: "Kitchen blinds",
         },
         {
-          src: "/legacy/site/Persienner-Stockholm-6.jpg",
-          alt: "Blinds detail",
-        },
-        {
-          src: "/legacy/site/Markiser-Stockholm.jpg",
-          alt: "Awnings in Stockholm",
-        },
-        {
-          src: "/legacy/site/Markiser-Stockholm-1.jpg",
-          alt: "Terrace awnings",
-        },
-        {
-          src: "/legacy/site/markiser-stockholm-4.jpg",
-          alt: "Balcony awnings",
-        },
-        {
-          src: "/legacy/site/markiser-stockholm-7.jpg",
-          alt: "Facade sun protection",
-        },
-        {
-          src: "/legacy/site/Persienner-stockholm-021.jpg",
-          alt: "Bedroom blinds",
-        },
-        {
-          src: "/legacy/site/Persienner-Stockholm-023.jpg",
+          src: "/legacy/site/Persienner-stockholm-019.jpg",
           alt: "Custom-size blinds",
+        },
+        {
+          src: "/legacy/site/renew.jpg",
+          alt: "Durable Swedish products",
         },
       ],
     },
     cta: {
-      title:
-        "Thinking about installing awnings in Stockholm for your patio or windows?",
+      title: "Awnings that extend the season",
       text:
-        "We provide free quotes, on-site measurements and tailored solutions.",
+        "A beautiful awning enhances your balcony, patio or terrace while protecting furniture and rugs from sun fading. We do home visits, provide quotes and take the necessary measurements.",
       button: "Get in touch",
-      image: "/legacy/site/markiser-stockholm-10.jpg",
+      image: "/legacy/site/Markiser-Stockholm-1.jpg",
     },
     contact: {
       title: "Contact us",
@@ -431,7 +569,7 @@ export const siteContent: Record<
       phoneLabel: "Phone",
       emailLabel: "Email",
       orgLabel: "Company ID",
-      address: "Färlandagränd 44, 125 72 Älvsjö",
+      address: "F\u00f6rlandagr\u00e4nd 44, 125 72 \u00c4lvsj\u00f6",
       phone: "076-415 04 46",
       email: "info@mmpersienner.se",
       orgNumber: "559161-8664",
@@ -444,5 +582,8 @@ export const siteContent: Record<
         submit: "Send",
       },
     },
-  },
-};
+  },};
+
+
+
+

@@ -525,6 +525,133 @@ export default function HomePage({ params }: PageProps) {
               </div>
             </section>
             <section
+              className="section section-masthead section-fullheight text-center text-lg-right pt-large pt-md-0"
+              data-arts-os-animation="true"
+              data-background-color="var(--color-light-1)"
+            >
+              <div className="section-masthead__inner section-fullheight__inner section-fullheight__inner_mobile-auto">
+                <div className="row no-gutters h-100 align-items-center">
+                  <div className="col-lg-6 h-100">
+                    <div className="container-fluid container-fluid_paddings h-100 container_py-xs-0">
+                      <div className="row align-items-center h-100">
+                        <div className="col">
+                          <header className="section-masthead__header justify-content-center">
+                            <div
+                              className="section-masthead__subheading small-caps mt-0 mb-1 mb-md-2 split-text js-split-text"
+                              data-split-text-type="lines,words"
+                              data-split-text-set="words"
+                            >
+                              <span>{content.heroSecondary.eyebrow}</span>
+                            </div>
+                            <div className="w-100"></div>
+                            <div
+                              className="section-masthead__heading split-text js-split-text"
+                              data-split-text-type="lines,words"
+                              data-split-text-set="words"
+                            >
+                              <h2 className="h1 mt-0 mb-0">{content.heroSecondary.title}</h2>
+                            </div>
+                            <div className="w-100"></div>
+                            <div
+                              className="section-masthead__text split-text js-split-text mt-1"
+                              data-split-text-type="lines"
+                              data-split-text-set="lines"
+                            >
+                              <p>{content.heroSecondary.text}</p>
+                            </div>
+                            <div className="section-masthead__button mt-2">
+                              <a
+                                className="button button_solid button_black"
+                                data-hover={content.heroSecondary.cta}
+                                href="#contact"
+                              >
+                                <span className="button__label-hover">
+                                  {content.heroSecondary.cta}
+                                </span>
+                              </a>
+                            </div>
+                          </header>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-6 align-self-stretch">
+                    <div className="section-image section-masthead__background section-masthead__background_halfscreen section-masthead__background_halfscreen-gutters mt-small mt-md-0">
+                      <div
+                        className="section-image__wrapper js-transition-img"
+                        data-arts-parallax="data-arts-parallax"
+                        data-arts-parallax-factor="0.15"
+                      >
+                        <div className="js-transition-img__transformed-el">
+                          <div className="lazy-bg" data-src={content.heroSecondary.image}></div>
+                        </div>
+                      </div>
+                      <div className="section-masthead__bg bg-white"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              className="section section-masthead section-fullheight text-center bg-dark-1"
+              data-arts-os-animation="true"
+              data-arts-theme-text="light"
+              data-background-color="var(--color-dark-1)"
+            >
+              <div className="section-masthead__inner section-fullheight__inner container-fluid">
+                <header className="row section-masthead__header justify-content-center">
+                  <div className="col-lg-8">
+                    <div
+                      className="section-masthead__subheading small-caps mt-0 mb-1 mb-md-2 split-text js-split-text"
+                      data-split-text-type="lines,words"
+                      data-split-text-set="words"
+                    >
+                      <span>{content.heroTertiary.eyebrow}</span>
+                    </div>
+                    <div className="w-100"></div>
+                    <div
+                      className="section-masthead__heading split-text js-split-text"
+                      data-split-text-type="lines,words"
+                      data-split-text-set="words"
+                    >
+                      <h2 className="h1 mt-0 mb-0">{content.heroTertiary.title}</h2>
+                    </div>
+                    <div className="w-100"></div>
+                    <div
+                      className="section-masthead__text split-text js-split-text mt-1"
+                      data-split-text-type="lines"
+                      data-split-text-set="lines"
+                    >
+                      <p>{content.heroTertiary.text}</p>
+                    </div>
+                    <div className="section-content__button mt-2">
+                      <a
+                        className="button button_white button_bordered"
+                        data-hover={content.heroTertiary.cta}
+                        href="#contact"
+                      >
+                        <span className="button__label-hover">
+                          {content.heroTertiary.cta}
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </header>
+              </div>
+              <div className="section-image section-masthead__background section-masthead__background_fullscreen">
+                <div
+                  className="section-image__wrapper js-transition-img"
+                  data-arts-parallax="data-arts-parallax"
+                  data-arts-parallax-factor="0.15"
+                >
+                  <div className="js-transition-img__transformed-el">
+                    <div className="lazy-bg" data-src={content.heroTertiary.image}></div>
+                  </div>
+                </div>
+                <div className="overlay overlay_circle-dark overlay_deither section-masthead__overlay"></div>
+              </div>
+            </section>
+            <section
               className="section section-content clearfix bg-light-1 pt-large pb-medium"
               id="about"
               data-arts-os-animation="true"
@@ -715,6 +842,52 @@ export default function HomePage({ params }: PageProps) {
                       ></canvas>
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>
+            <section
+              className="section section-content clearfix bg-light-1 pt-medium pb-medium"
+              data-arts-os-animation="true"
+            >
+              <div className="container">
+                <div className="row align-items-end justify-content-between">
+                  <div className="col-lg-7">
+                    <div
+                      className="section-content__heading split-text js-split-text"
+                      data-split-text-type="lines,words"
+                      data-split-text-set="words"
+                    >
+                      <h2 className="h2 mt-0 mb-0">{content.services.title}</h2>
+                    </div>
+                    <div className="section__headline mt-2 mr-auto"></div>
+                  </div>
+                  <div className="col-lg-4">
+                    <div
+                      className="section-content__text split-text js-split-text mt-1"
+                      data-split-text-type="lines"
+                      data-split-text-set="lines"
+                    >
+                      <p>{content.services.revealTitle}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="row row-gutters mt-2">
+                  {content.productGroups.map((group) => (
+                    <div className="col-lg-4 col-sm-6 col-gutters" key={group.title}>
+                      <div className="figure-feature bg-white">
+                        <div className="figure-feature__header">
+                          <div className="figure-feature__heading h4 mt-0-5 mb-0">
+                            {group.title}
+                          </div>
+                        </div>
+                        <div className="figure-feature__text paragraph mt-0-5 mb-0">
+                          {group.items.map((item) => (
+                            <div key={`${group.title}-${item}`}>{item}</div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
@@ -1653,6 +1826,86 @@ void main() {
   } else {
     applyFallbacks();
   }
+})();`,
+        }}
+      />
+      <script
+        id="demo-menu-fallback"
+        dangerouslySetInnerHTML={{
+          __html: `(function () {
+  var fallbackActive = false;
+  var header = document.getElementById("page-header");
+  var burger = document.getElementById("js-burger");
+  if (!header || !burger) {
+    return;
+  }
+  var overlay = header.querySelector(".header__wrapper-overlay-menu");
+
+  function openMenu() {
+    header.classList.add("opened");
+    burger.classList.add("header__burger_opened");
+    if (overlay) {
+      overlay.style.opacity = "1";
+      overlay.style.visibility = "visible";
+    }
+  }
+
+  function closeMenu() {
+    header.classList.remove("opened");
+    burger.classList.remove("header__burger_opened");
+    if (overlay) {
+      overlay.style.opacity = "";
+      overlay.style.visibility = "";
+    }
+  }
+
+  function isOverlayVisible() {
+    if (!overlay) {
+      return false;
+    }
+    var style = window.getComputedStyle(overlay);
+    return style.visibility !== "hidden" && style.opacity !== "0";
+  }
+
+  document.addEventListener("click", function (event) {
+    var clickedBurger = event.target.closest("#js-burger");
+    if (!clickedBurger) {
+      if (!fallbackActive) {
+        return;
+      }
+      if (event.target.closest(".header__wrapper-overlay-menu")) {
+        return;
+      }
+      closeMenu();
+      return;
+    }
+
+    event.preventDefault();
+    setTimeout(function () {
+      if (!fallbackActive) {
+        var opened = header.classList.contains("opened") || isOverlayVisible();
+        if (!opened) {
+          fallbackActive = true;
+        } else {
+          return;
+        }
+      }
+      if (header.classList.contains("opened")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }, 150);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (!fallbackActive) {
+      return;
+    }
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
 })();`,
         }}
       />
