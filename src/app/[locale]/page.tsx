@@ -28,7 +28,15 @@ export default function HomePage({ params }: PageProps) {
   const aboutImage = content.gallery.items[0];
   const aboutImageSrc = aboutImage?.src ?? content.hero.image;
   const aboutImageAlt = aboutImage?.alt ?? content.about.title;
-  const gallerySlides = content.gallery.items.slice(0, 4);
+  const heroSlides =
+    content.heroSlider.items.length >= 10
+      ? content.heroSlider.items
+      : [
+          ...content.heroSlider.items,
+          ...content.heroSlider.items,
+          ...content.heroSlider.items,
+        ].slice(0, 10);
+  const gallerySlides = content.gallery.items.slice(0, 8);
 
   return (
     <>
@@ -404,7 +412,7 @@ export default function HomePage({ params }: PageProps) {
                 <div className="slider slider-fullscreen-projects js-slider-fullscreen-projects js-slider">
                   <div className="slider-fullscreen-projects__content swiper-container pointer-events-none js-slider-fullscreen-projects__content">
                     <div className="swiper-wrapper">
-                      {content.heroSlider.items.map((item) => (
+                      {heroSlides.map((item) => (
                         <div className="swiper-slide" key={item.title}>
                           <h2
                             className="h1 slider__heading js-split-text"
@@ -429,7 +437,7 @@ export default function HomePage({ params }: PageProps) {
                     data-counter-style="roman"
                   >
                     <div className="swiper-wrapper">
-                      {content.heroSlider.items.map((item) => (
+                      {heroSlides.map((item) => (
                         <div className="swiper-slide overflow" key={item.image}>
                           <div
                             className="slider__images-slide-inner js-transition-img overflow"
@@ -448,7 +456,7 @@ export default function HomePage({ params }: PageProps) {
                   </div>
                   <div className="slider-fullscreen-projects__footer swiper-container js-slider-fullscreen-projects__footer">
                     <div className="swiper-wrapper">
-                      {content.heroSlider.items.map((item) => (
+                      {heroSlides.map((item) => (
                         <div className="swiper-slide" key={item.title}>
                           <div className="slider__wrapper-button-footer">
                             <a
@@ -1906,6 +1914,92 @@ void main() {
       closeMenu();
     }
   });
+})();`,
+        }}
+      />
+      <script
+        id="demo-slider-fallback"
+        dangerouslySetInnerHTML={{
+          __html: `(function () {
+  function isInitialized(el) {
+    if (!el) {
+      return false;
+    }
+    return el.classList.contains("swiper-initialized") || el.classList.contains("swiper-container-initialized");
+  }
+
+  function setupWrapper(wrapper) {
+    if (!wrapper) {
+      return;
+    }
+    var slides = Array.prototype.slice.call(wrapper.querySelectorAll(".swiper-slide"));
+    if (!slides.length) {
+      return;
+    }
+    wrapper.style.position = "relative";
+    slides.forEach(function (slide) {
+      slide.style.position = "absolute";
+      slide.style.top = "0";
+      slide.style.left = "0";
+      slide.style.width = "100%";
+      slide.style.height = "100%";
+      slide.style.opacity = "0";
+      slide.style.transition = "opacity 0.8s ease";
+    });
+    return slides;
+  }
+
+  function createFallbackSlider(container) {
+    var content = container.querySelector(".js-slider-fullscreen-projects__content .swiper-wrapper");
+    var images = container.querySelector(".js-slider-fullscreen-projects__images .swiper-wrapper");
+    var footer = container.querySelector(".js-slider-fullscreen-projects__footer .swiper-wrapper");
+    var contentSlides = setupWrapper(content);
+    var imageSlides = setupWrapper(images);
+    var footerSlides = setupWrapper(footer);
+    if (!imageSlides || !imageSlides.length) {
+      return;
+    }
+    var total = imageSlides.length;
+    var index = 0;
+
+    function show(i) {
+      if (contentSlides) {
+        contentSlides.forEach(function (slide, idx) {
+          slide.style.opacity = idx === i ? "1" : "0";
+        });
+      }
+      imageSlides.forEach(function (slide, idx) {
+        slide.style.opacity = idx === i ? "1" : "0";
+      });
+      if (footerSlides) {
+        footerSlides.forEach(function (slide, idx) {
+          slide.style.opacity = idx === i ? "1" : "0";
+        });
+      }
+    }
+
+    show(index);
+    setInterval(function () {
+      index = (index + 1) % total;
+      show(index);
+    }, 4500);
+  }
+
+  function initFallbacks() {
+    var sliders = Array.prototype.slice.call(document.querySelectorAll(".js-slider-fullscreen-projects"));
+    if (!sliders.length) {
+      return;
+    }
+    sliders.forEach(function (slider) {
+      var images = slider.querySelector(".js-slider-fullscreen-projects__images");
+      if (isInitialized(images)) {
+        return;
+      }
+      createFallbackSlider(slider);
+    });
+  }
+
+  setTimeout(initFallbacks, 1400);
 })();`,
         }}
       />

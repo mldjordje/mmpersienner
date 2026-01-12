@@ -128,6 +128,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       pageContent.style.visibility = 'visible';
       pageContent.style.display = 'block';
     }
+    var header = document.getElementById('page-header');
+    if (header) {
+      header.style.opacity = '1';
+      header.style.visibility = 'visible';
+    }
   }
 
   if (document.readyState === 'complete') {
