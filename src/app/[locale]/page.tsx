@@ -446,6 +446,7 @@ export default function HomePage({ params }: PageProps) {
                             <div
                               className="slider__bg lazy-bg js-transition-img__transformed-el"
                               data-texture-src={item.image}
+                              style={{ backgroundImage: `url(${item.image})` }}
                             ></div>
                           </div>
                         </div>
@@ -533,7 +534,7 @@ export default function HomePage({ params }: PageProps) {
               </div>
             </section>
             <section
-              className="section section-masthead section-fullheight text-center text-lg-right pt-large pt-md-0"
+              className="section section-masthead section-fullheight text-center text-lg-right pt-large pt-md-0 bg-light-1"
               data-arts-os-animation="true"
               data-background-color="var(--color-light-1)"
             >
@@ -591,7 +592,11 @@ export default function HomePage({ params }: PageProps) {
                         data-arts-parallax-factor="0.15"
                       >
                         <div className="js-transition-img__transformed-el">
-                          <div className="lazy-bg" data-src={content.heroSecondary.image}></div>
+                          <div
+                            className="lazy-bg"
+                            data-src={content.heroSecondary.image}
+                            style={{ backgroundImage: `url(${content.heroSecondary.image})` }}
+                          ></div>
                         </div>
                       </div>
                       <div className="section-masthead__bg bg-white"></div>
@@ -653,7 +658,11 @@ export default function HomePage({ params }: PageProps) {
                   data-arts-parallax-factor="0.15"
                 >
                   <div className="js-transition-img__transformed-el">
-                    <div className="lazy-bg" data-src={content.heroTertiary.image}></div>
+                    <div
+                      className="lazy-bg"
+                      data-src={content.heroTertiary.image}
+                      style={{ backgroundImage: `url(${content.heroTertiary.image})` }}
+                    ></div>
                   </div>
                 </div>
                 <div className="overlay overlay_circle-dark overlay_deither section-masthead__overlay"></div>
@@ -695,7 +704,7 @@ export default function HomePage({ params }: PageProps) {
                             <div className="lazy">
                               <img
                                 data-src={aboutImageSrc}
-                                src="#"
+                                src={aboutImageSrc}
                                 alt={aboutImageAlt}
                                 width="1280"
                                 height="1920"
@@ -802,7 +811,7 @@ export default function HomePage({ params }: PageProps) {
                                     <img
                                       className="of-cover"
                                       data-texture-src={item.image}
-                                      src="#"
+                                      src={item.image}
                                       alt={item.title}
                                     />
                                   </div>
@@ -952,6 +961,7 @@ export default function HomePage({ params }: PageProps) {
                             <div
                               className="slider__bg swiper-lazy js-transition-img__transformed-el"
                               data-background={item.image}
+                              style={{ backgroundImage: `url(${item.image})` }}
                             ></div>
                           </div>
                         </div>
@@ -1062,7 +1072,7 @@ export default function HomePage({ params }: PageProps) {
                                 <div className="lazy">
                                   <img
                                     data-src={item.image}
-                                    src="#"
+                                    src={item.image}
                                     alt={item.title}
                                     width="1920"
                                     height="1280"
@@ -1174,7 +1184,7 @@ export default function HomePage({ params }: PageProps) {
                                 <div className="lazy js-transition-img__transformed-el">
                                   <img
                                     data-src={item.src}
-                                    src="#"
+                                    src={item.src}
                                     alt={item.alt}
                                     width="1280"
                                     height="1920"
@@ -1265,6 +1275,7 @@ export default function HomePage({ params }: PageProps) {
                             <div
                               className="slider__bg lazy-bg js-transition-img__transformed-el"
                               data-texture-src={item.src}
+                              style={{ backgroundImage: `url(${item.src})` }}
                             ></div>
                           </div>
                         </div>
@@ -1399,7 +1410,7 @@ export default function HomePage({ params }: PageProps) {
                   <div className="row no-gutters h-100">
                     <div className="col-lg-4 order-lg-2">
                       <section
-                        className="section section-masthead"
+                        className="section section-masthead bg-light-1"
                         data-arts-os-animation="true"
                         data-background-color="var(--color-light-1)"
                       >
@@ -1410,7 +1421,11 @@ export default function HomePage({ params }: PageProps) {
                             data-arts-parallax-factor="0.15"
                           >
                             <div className="js-transition-img__transformed-el">
-                              <div className="lazy-bg" data-src={content.cta.image}></div>
+                              <div
+                                className="lazy-bg"
+                                data-src={content.cta.image}
+                                style={{ backgroundImage: `url(${content.cta.image})` }}
+                              ></div>
                             </div>
                           </div>
                         </div>
