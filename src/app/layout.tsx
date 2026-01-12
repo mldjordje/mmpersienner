@@ -103,6 +103,25 @@ export default async function RootLayout({ children }: RootLayoutProps) {
           {`
 (function () {
   var didHide = false;
+  var didEmit = false;
+  function emitPreloaderEnd() {
+    if (didEmit) return;
+    didEmit = true;
+    try {
+      if (window.$window && typeof window.$window.trigger === 'function') {
+        window.$window.trigger('arts/preloader/end');
+      }
+    } catch (e) {}
+    try {
+      window.dispatchEvent(new CustomEvent('arts/preloader/end'));
+    } catch (e) {}
+    if (window.SMController && typeof window.SMController.enabled === 'function') {
+      window.SMController.enabled(true);
+      if (typeof window.SMController.update === 'function') {
+        window.SMController.update(true);
+      }
+    }
+  }
   function forceHide() {
     if (didHide) return;
     var preloader = document.getElementById('js-preloader');
@@ -133,6 +152,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
       header.style.opacity = '1';
       header.style.visibility = 'visible';
     }
+    emitPreloaderEnd();
   }
 
   if (document.readyState === 'complete') {
