@@ -238,12 +238,18 @@ if ('scrollRestoration' in history) {
 /**
  * Page Load Strategy
  */
-window.$window.on('load', function () {
+function runPageLoad() {
+	if (window.__mmpersiennerPageLoadRan) {
+		return;
+	}
+	window.__mmpersiennerPageLoadRan = true;
 
 	new Animations();
 
 	// load fonts first
-	document.fonts.ready
+	const fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+	fontsReady
+		.catch(() => {})
 		// prepare all the texts
 		.then(() => SetText.splitText({
 			target: window.$document.find('.js-split-text')
@@ -267,7 +273,12 @@ window.$window.on('load', function () {
 				scope: window.$document
 			});
 		})
-		.then(() => window.PagePreloader.finish())
+		.then(() => {
+			if (window.PagePreloader && typeof window.PagePreloader.finish === 'function') {
+				return window.PagePreloader.finish();
+			}
+			return null;
+		})
 		.then(() => {
 			// init cursor only on non-touch browsers
 			if (window.theme.cursorFollower.enabled && !window.Modernizr.touchevents) {
@@ -285,6 +296,25 @@ window.$window.on('load', function () {
 			// begin animations 
 			window.SMController.enabled(true);
 			window.SMController.update(true);
+		})
+		.catch(() => {
+			try {
+				initComponentsOnce({
+					scope: window.$document
+				});
+				initComponents({
+					scope: window.$document
+				});
+			} catch (e) {}
+			if (window.PagePreloader && typeof window.PagePreloader.finish === 'function') {
+				window.PagePreloader.finish();
+			}
+			if (window.SMController && typeof window.SMController.enabled === 'function') {
+				window.SMController.enabled(true);
+				if (typeof window.SMController.update === 'function') {
+					window.SMController.update(true);
+				}
+			}
 		});
 
 	// init AJAX navigation
@@ -294,8 +324,13 @@ window.$window.on('load', function () {
 			scope: window.$document
 		});
 	}
+}
 
-});
+if (document.readyState === 'complete') {
+	setTimeout(runPageLoad, 0);
+} else {
+	window.$window.on('load', runPageLoad);
+}
 
 /**
  * Init Template Components after the initial
