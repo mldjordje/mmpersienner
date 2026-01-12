@@ -35,6 +35,11 @@ export const siteContent: Record<
     };
     about: { title: string; lead: string; body: string; highlightsTitle: string };
     highlights: { title: string; text: string }[];
+    proof: {
+      title: string;
+      kicker: string;
+      items: { title: string; text: string }[];
+    };
     services: {
       title: string;
       revealTitle: string;
@@ -44,6 +49,7 @@ export const siteContent: Record<
     productGroups: { title: string; items: string[] }[];
     gallery: { title: string; items: { src: string; alt: string }[] };
     cta: { title: string; text: string; button: string; image: string };
+    map: { title: string; text: string; iframe: string };
     contact: {
       title: string;
       lead: string;
@@ -169,6 +175,24 @@ export const siteContent: Record<
         text: "Snabb leverans och professionell montering.",
       },
     ],
+    proof: {
+      title: "Tryggt val f\u00f6r hem och f\u00f6retag",
+      kicker: "Kort leveranstid. Svensk kvalitet.",
+      items: [
+        {
+          title: "Skriftlig garanti",
+          text: "5 \u00e5rs garanti p\u00e5 material och arbete.",
+        },
+        {
+          title: "Svenska produkter",
+          text: "H\u00e5llbara solskydd f\u00f6r nordiskt klimat.",
+        },
+        {
+          title: "Smidig helhetsl\u00f6sning",
+          text: "M\u00e5tt, montering och service fr\u00e5n start till m\u00e5l.",
+        },
+      ],
+    },
     services: {
       title: "Tj\u00e4nster",
       revealTitle: "Utvalda l\u00f6sningar",
@@ -303,6 +327,13 @@ export const siteContent: Record<
       button: "Kontakta oss",
       image: "/legacy/site/Markiser-Stockholm-1.jpg",
     },
+    map: {
+      title: "Hitta oss i \u00c4lvsj\u00f6",
+      text:
+        "Vi utg\u00e5r fr\u00e5n \u00c4lvsj\u00f6 och arbetar i hela Storstockholm. Boka hembes\u00f6k s\u00e5 kommer vi ut och m\u00e4ter.",
+      iframe:
+        "https://www.google.com/maps?q=F%C3%B6rlandagr%C3%A4nd%2044%2C%20125%2072%20%C3%84lvsj%C3%B6&output=embed",
+    },
     contact: {
       title: "Kontakta oss",
       lead:
@@ -427,6 +458,24 @@ export const siteContent: Record<
         text: "Fast delivery and professional installation.",
       },
     ],
+    proof: {
+      title: "A safe choice for homes and businesses",
+      kicker: "Fast lead times. Swedish quality.",
+      items: [
+        {
+          title: "Written warranty",
+          text: "5-year warranty on materials and labor.",
+        },
+        {
+          title: "Swedish products",
+          text: "Durable sun protection built for Nordic conditions.",
+        },
+        {
+          title: "Full-service delivery",
+          text: "Measurement, installation and service from start to finish.",
+        },
+      ],
+    },
     services: {
       title: "Services",
       revealTitle: "Selected solutions",
@@ -560,6 +609,13 @@ export const siteContent: Record<
         "A beautiful awning enhances your balcony, patio or terrace while protecting furniture and rugs from sun fading. We do home visits, provide quotes and take the necessary measurements.",
       button: "Get in touch",
       image: "/legacy/site/Markiser-Stockholm-1.jpg",
+    },
+    map: {
+      title: "Find us in \u00c4lvsj\u00f6",
+      text:
+        "We are based in \u00c4lvsj\u00f6 and serve all of Greater Stockholm. Book a home visit and we will come to you.",
+      iframe:
+        "https://www.google.com/maps?q=F%C3%B6rlandagr%C3%A4nd%2044%2C%20125%2072%20%C3%84lvsj%C3%B6&output=embed",
     },
     contact: {
       title: "Contact us",

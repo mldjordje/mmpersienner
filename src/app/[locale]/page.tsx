@@ -15,6 +15,11 @@ const highlightIcons = [
   "/img/assets/sectionServices/rings.svg",
   "/img/assets/sectionServices/studio-lighting.svg",
 ];
+const proofIcons = [
+  "/img/assets/sectionServices/value.svg",
+  "/img/assets/sectionServices/magazine.svg",
+  "/img/assets/sectionServices/rings.svg",
+];
 
 export default function HomePage({ params }: PageProps) {
   if (!isLocale(params.locale)) {
@@ -414,12 +419,27 @@ export default function HomePage({ params }: PageProps) {
                     <div className="swiper-wrapper">
                       {heroSlides.map((item) => (
                         <div className="swiper-slide" key={item.title}>
+                          <div className="slider__subheading small-caps mb-1">
+                            {content.hero.eyebrow}
+                          </div>
                           <h2
                             className="h1 slider__heading js-split-text"
                             data-split-text-type="lines, words, chars"
                           >
                             {item.title}
                           </h2>
+                          <div className="slider__text paragraph mt-1">
+                            {content.hero.subtitle}
+                          </div>
+                          <div className="slider__wrapper-button mt-2">
+                            <a
+                              className="button button_white button_bordered"
+                              data-hover={content.hero.cta}
+                              href="#contact"
+                            >
+                              <span className="button__label-hover">{content.hero.cta}</span>
+                            </a>
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -530,6 +550,44 @@ export default function HomePage({ params }: PageProps) {
                       <canvas className="slider__canvas"></canvas>
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>
+            <section
+              className="section section-content bg-dark-2 pt-medium pb-medium"
+              data-arts-theme-text="light"
+              data-arts-os-animation="true"
+            >
+              <div className="container">
+                <div className="row align-items-end justify-content-between">
+                  <div className="col-lg-6">
+                    <div className="section-content__heading split-text js-split-text">
+                      <h2 className="h2 mt-0 mb-0">{content.proof.title}</h2>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 text-lg-right mt-2 mt-lg-0">
+                    <div className="small-caps">{content.proof.kicker}</div>
+                  </div>
+                </div>
+                <div className="row row-gutters mt-2">
+                  {content.proof.items.map((item, index) => (
+                    <div className="col-lg-4 col-sm-6 col-gutters" key={item.title}>
+                      <div className="figure-feature bg-dark-1">
+                        <div className="figure-feature__header">
+                          <div className="figure-feature__icon">
+                            <img
+                              src={proofIcons[index % proofIcons.length]}
+                              alt={item.title}
+                            />
+                          </div>
+                          <div className="figure-feature__heading h4 mt-0-5 mb-0">
+                            {item.title}
+                          </div>
+                        </div>
+                        <p className="paragraph mt-0-5 mb-0">{item.text}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </section>
@@ -1402,6 +1460,37 @@ export default function HomePage({ params }: PageProps) {
                   </div>
                 </div>
                 <div className="overlay overlay_top-dark section-masthead__overlay"></div>
+              </div>
+            </section>
+            <section
+              className="section section-content bg-light-1 pt-large pb-medium"
+              data-arts-os-animation="true"
+              id="location"
+            >
+              <div className="container">
+                <div className="row align-items-center">
+                  <div className="col-lg-5">
+                    <div className="section-content__heading split-text js-split-text">
+                      <h2 className="h2 mt-0 mb-0">{content.map.title}</h2>
+                    </div>
+                    <div className="section-content__text split-text js-split-text mt-1">
+                      <p>{content.map.text}</p>
+                    </div>
+                    <div className="small-caps mt-2">{content.contact.addressLabel}</div>
+                    <p className="paragraph mt-0-5">{content.contact.address}</p>
+                  </div>
+                  <div className="col-lg-7 mt-2 mt-lg-0">
+                    <div className="map-embed">
+                      <iframe
+                        title={content.map.title}
+                        src={content.map.iframe}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             <section className="section section-fullheight" id="contact">
