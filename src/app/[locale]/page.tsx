@@ -269,11 +269,19 @@ export default function HomePage({ params }: PageProps) {
               </div>
               <div className="col-auto header__col">
                 <div className="lang-switch" aria-label="Language switch">
-                  <a className={locale === "sv" ? "is-active" : ""} href="/sv">
+                  <a
+                    className={locale === "sv" ? "is-active" : ""}
+                    href="/sv"
+                    data-barba-prevent="all"
+                  >
                     SV
                   </a>
                   <span>/</span>
-                  <a className={locale === "en" ? "is-active" : ""} href="/en">
+                  <a
+                    className={locale === "en" ? "is-active" : ""}
+                    href="/en"
+                    data-barba-prevent="all"
+                  >
                     EN
                   </a>
                 </div>
