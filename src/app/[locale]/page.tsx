@@ -1607,6 +1607,55 @@ void main() {
 });`,
         }}
       />
+      <script
+        id="demo-image-fallbacks"
+        dangerouslySetInnerHTML={{
+          __html: `(function () {
+  function setBackground(el, src) {
+    if (!src || !el || !el.style) {
+      return;
+    }
+    if (!el.style.backgroundImage) {
+      el.style.backgroundImage = "url(" + src + ")";
+    }
+  }
+
+  function swapSource(el, src) {
+    if (!src) {
+      return;
+    }
+    if (el.tagName === "IMG") {
+      var current = el.getAttribute("src");
+      if (!current || current === "#") {
+        el.setAttribute("src", src);
+      }
+      return;
+    }
+    setBackground(el, src);
+  }
+
+  function applyFallbacks() {
+    document.querySelectorAll("[data-src]").forEach(function (el) {
+      swapSource(el, el.getAttribute("data-src"));
+    });
+
+    document.querySelectorAll("[data-texture-src]").forEach(function (el) {
+      swapSource(el, el.getAttribute("data-texture-src"));
+    });
+
+    document.querySelectorAll("[data-background]").forEach(function (el) {
+      setBackground(el, el.getAttribute("data-background"));
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyFallbacks);
+  } else {
+    applyFallbacks();
+  }
+})();`,
+        }}
+      />
     </>
   );
 }
