@@ -1,0 +1,60 @@
+:root {
+  --mmp-accent: #0b69b3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #f6f3ee;
+  color: #101010;
+}
+
+#page-wrapper,
+.page-wrapper__content,
+.js-smooth-scroll {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lang-switch {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lang-switch a {
+  padding: 4px 2px;
+  opacity: 0.6;
+}
+
+.lang-switch a.is-active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+[data-arts-os-animation] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
