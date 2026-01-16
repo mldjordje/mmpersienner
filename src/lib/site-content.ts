@@ -88,7 +88,7 @@ export const siteContent: Record<
       eyebrow: "Sol- och insynsskydd i Storstockholm",
       title: "M.M PERSIENNER STOCKHOLM ST\u00c5R F\u00d6R SMAK OCH STIL INNE OCH I UTERUMMET",
       subtitle:
-        "M.M Persienner Stockholm \u00e4r ett dynamiskt, professionellt f\u00f6retag som \u00e4r specialiserat p\u00e5 sol- och insynsskydd som persienner, markiser och balkongskydd.",
+        "Specialister p\u00e5 persienner, markiser och balkongskydd i Storstockholm.",
       cta: "Boka kostnadsfritt hembes\u00f6k",
       image: "/legacy/site/Persienner-Stockholm-8.jpg",
     },
@@ -371,7 +371,7 @@ export const siteContent: Record<
       eyebrow: "Sun and privacy protection in Stockholm",
       title: "MM PERSIENNER STOCKHOLM STANDS FOR TASTE AND STYLE INDOORS AND IN CONSERVATORIES",
       subtitle:
-        "MM Persienner Stockholm is a dynamic, professional company specializing in sun and privacy protection such as blinds, awnings and balcony screens.",
+        "Specialists in blinds, awnings and balcony screens across Greater Stockholm.",
       cta: "Book a free home visit",
       image: "/legacy/site/Persienner-Stockholm-8.jpg",
     },
