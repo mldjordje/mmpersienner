@@ -3201,6 +3201,11 @@ div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
   color: var(--color-gray-2);
 }
 
+.header .logo__wrapper-img img {
+  height: 20px;
+  width: auto;
+}
+
 /*!========================================================================
  * 36. Header Sticky
  * ======================================================================!*/

@@ -1896,6 +1896,9 @@ void main() {
   if (href.startsWith("#") || href.startsWith("tel:") || href.startsWith("mailto:")) {
     return;
   }
+  if (href.startsWith("/")) {
+    return;
+  }
   event.preventDefault();
 });`,
         }}
